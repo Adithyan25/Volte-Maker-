@@ -1,0 +1,67 @@
+Welcome to the Volte Maker v1.0 by adithyan 25
+
+
+What is Volte Maker?
+Volte Maker is a tool created for making patches for rom that does not supports volte on kenzo
+
+How Does it works?
+Run the file and follow the methods given Below
+
+How To make volte patches?
+Making Patches is now simple for everyone.Just Follow The Methods.
+
+1.You Must Have Adb and Notepad++ Installed
+If you Dont have adb Get it by clickin on Get Adb. After Installing adb connect your phone in USB Debugging mode.
+
+
+Get Notepad++ from 
+https://notepad-plus-plus.org/
+
+
+2.Checking Connection
+Once Conncetd to your pc,Click on CHECK CONNECTION to find if the phone is detected.If yes "CONNECTED" will be shown
+
+3.Getting Required Files
+Click on "PULL FRAME WORK-RES"  and then click on "UNPACK FRAMEWORK".This will take some time.Be Patient untill the process is done.You can see Framework-res.apk and build.prop in the folder and after unpacking a folder will be vreated in the name framework-res
+
+
+4.Editing Volte File
+Once the above process is done,click on "EDIT VOLTE FILE". A file will be opened in Notepad++/
+
+And change the values of this line from false to true
+
+Change the lines like this.
+------------------------------------
+ <bool name="config_device_volte_available">true</bool>
+
+<bool name="config_carrier_volte_available">true</bool>
+
+after that click Ctrl+S to save the file
+
+
+5.Repacking The File.
+Click on "REPACK FRAMEWORK".This will take some time.Be Patient untill the process is done.
+
+6.Final Changes.
+Open new framework-res.apk from apktool/framework-res/dist folder and old framework-res.apk from main folder using a zip software like winrar.
+
+Drag and copy AndroidManifest.xml and META-INF from old to new apk.
+
+Save and Close zip file.
+
+7.Download Volte.zip from the software and Flash as instructed..
+
+---------------------------------------------------------------------------------------
+
+Special Thanks
+
+
+Sudeep Duhoon for making the tutorial
+
+Read his thread at 
+http://forum.xda-developers.com/redmi-note-3/development/volte-patches-nougat-based-cm-roms-t3509257
+
+Snoop05 for adb tool.
+
+
+
